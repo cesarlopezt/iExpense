@@ -21,7 +21,7 @@ class Expenses: ObservableObject {
     }
     
     func removeItems(at offsets: IndexSet, for type: String) {
-        var element = itemsForType(type)[offsets.first!]
+        let element = itemsForType(type)[offsets.first!]
         let index = items.firstIndex(where: {$0.id == element.id})!
         items.remove(at: index)
     }
